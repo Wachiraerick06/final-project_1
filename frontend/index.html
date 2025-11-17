@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Code Reviewer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prism/prism.css">
+</head>
+<body>
+<div class="container">
+    <div class="header-row">
+        <h1>AI Code Reviewer</h1>
+        <div>
+            <button id="themeToggle" class="theme-toggle" title="Toggle theme">🌙</button>
+            <button id="reviewBtn">Review Code</button>
+        </div>
+    </div>
+    <textarea id="codeInput" placeholder="Paste your Python code here"></textarea>
+
+    <div id="results" class="hidden">
+        <h2>Results</h2>
+        <p><strong>Quality Score:</strong> <span id="score"></span></p>
+
+        <p><strong>Bugs:</strong></p>
+        <ul id="bugs"></ul>
+
+        <p><strong>Security Issues:</strong></p>
+        <ul id="security"></ul>
+
+        <p><strong>Suggestions:</strong></p>
+        <div id="suggestions"></div>
+
+        <p><strong>Docstring:</strong></p>
+        <pre id="docstring"></pre>
+    </div>
+
+    <h2>Code Preview:</h2>
+    <pre><code id="codePreview" class="language-python"></code></pre>
+</div>
+
+<script src="prism/prism.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
